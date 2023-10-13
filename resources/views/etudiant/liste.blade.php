@@ -8,13 +8,14 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>CRUD IN LARAVEL 10</title>
+    <title>projet 8</title>
   </head>
   <body>
     <div class="container text-center">
       <div class="row">
         <div class="col s12">
-            <h1>CRUD IN LARAVEL 10</h1>
+            <h1>CRUD IN LARAVEL 10 </h1>
+           
             <hr>
             <a href="/ajouter" class="btn btn-primary">Ajouter un etudiant</a>
 <hr>
@@ -24,7 +25,9 @@
                 </div>
 
            @endif
-            
+           
+           
+           
         <table class="table">
             <thead>
               <tr>
@@ -32,6 +35,7 @@
                 <th>nom</th>
                 <th>prenom</th>
                 <th>classe</th>
+                <th>photo</th>
                 <th>actions</th>
               </tr>
             </thead>
@@ -46,6 +50,8 @@
                     <td>{{ $etudiant->nom }}</td>
                     <td>{{ $etudiant->prenom }}</td>
                     <td>{{ $etudiant->classe }}</td>
+                    <td>{{ $etudiant->image ? $etudiant->image->etudiant_id : "" }}</td>
+                    
                     
                     <td>
                       <a href="/update-etudiant/{{ $etudiant->id }}" class="btn btn-info">Update</a>
@@ -63,7 +69,7 @@
             </tbody>
         </table>
 
-        {{ $etudiants->links() }}
+   
 </div>
 </div>
 </div>
